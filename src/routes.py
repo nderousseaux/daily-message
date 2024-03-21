@@ -1,5 +1,7 @@
 """ All routes of the application """
 
+from flask import redirect
+
 from daily_message import app
 from src.bdd_utils import *
 from src.midjourney_utils import *
@@ -11,7 +13,9 @@ def index():
 		# If yes, return the image used today
 		url = get_image_used_today()
 
-		return url
+		url = url.replace("\n", "")
+
+		return redirect(url)
 
 	# If not, select a new image
 	else:
@@ -24,5 +28,7 @@ def index():
 		# Save the image used today
 		save_image_used_today(url)
 
-		# Return the image
-		return url
+		url = url.replace("\n", "")
+
+		# Redirect to the image
+		return redirect(url)
