@@ -1,0 +1,8 @@
+[Unit]
+Description = Daily message
+
+[Service]
+ExecStart = /daily-message/start.sh
+
+[Install]
+WantedBy = multi-user.target
