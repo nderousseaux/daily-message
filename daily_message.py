@@ -6,7 +6,7 @@ from flask import Flask
 app = Flask(__name__)
 
 # # Configuration from config.py
-# from config import *
+from src.config import *
 
 # All routes
 from src.routes import *
