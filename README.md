@@ -17,16 +17,21 @@ python daily_messages.py
 
 ## Deploiement
 
-Mettre tout le dossier dans /daily-messages.
+Mettre tout le dossier dans /daily-message.
+
+Installer les dépendances
+````
+pip install -r /daily-message/requirements.txt
+```
 
 Rendre le script exécutable.
 
 ```shell
-chmod +x /daily-messages/start.sh
+chmod +x /daily-message/start.sh
 ```
 
 Ajouter le script en service.
 
 ```shell
-sudo ln -s /daily-messages/daily-messages.service /etc/systemd/system/daily-messages.service
+sudo ln -s /daily-message/daily-message.service /etc/systemd/system/daily-message.service
 ```
