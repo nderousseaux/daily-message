@@ -17,7 +17,7 @@ def save_all_urls():
 def get_all_images():
 	"""Return all address of images from the feed page"""
 
-	driver = webdriver.Chrome()
+	driver = webdriver.Chrome(executable_path='/usr/lib/chromium-browser/chromedriver')
 	driver.implicitly_wait(100)
 	driver.maximize_window()
 	driver.get(MIDJOURNEY_URL)
